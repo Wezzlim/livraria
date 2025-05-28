@@ -36,9 +36,9 @@ public class Categoria
 	@UpdateTimestamp
 	private LocalDateTime data;
 	
-	/*@OneToMany(fetch = FetchType.LAZY, mappedBy = "categoria", cascade = CascadeType.REMOVE)
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "categoria", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("categoria")
-	private List<Produto> produto;*/
+	private List<Produto> produto;
 
 	public Long getId() {
 		return id;
@@ -64,13 +64,13 @@ public class Categoria
 		this.data = data;
 	}
 
-	/*public List<Produto> getProduto() {
+	public List<Produto> getProduto() {
 		return produto;
 	}
 
 	public void setProduto(List<Produto> produto) {
 		this.produto = produto;
-	}*/
+	}
 	
 	
 }
